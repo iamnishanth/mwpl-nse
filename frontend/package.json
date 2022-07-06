@@ -1,0 +1,19 @@
+{
+  "name": "mwpl",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jszip": "^3.10.0",
+    "preact": "^10.5.15"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.1.5",
+    "vite": "^2.9.9"
+  }
+}
