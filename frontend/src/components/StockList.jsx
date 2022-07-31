@@ -62,7 +62,7 @@ const StockItem = ({ stock }) => {
           stock.current_mwpl_percentage - stock.prev_mwpl_percentage > 0 ? "change-diff green" : "change-diff red"
         }
       >
-        {(stock.current_mwpl_percentage - stock.prev_mwpl_percentage).toFixed(2)}
+        {(stock.current_mwpl_percentage - stock.prev_mwpl_percentage).toFixed(2) + " %"}
       </div>
     </li>
   );
