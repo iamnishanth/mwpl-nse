@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "preact/hooks";
 
-const SERVER_URL = "https://mwpl-server.herokuapp.com/fetch_mwpl";
+const SERVER_URL = "https://mwpl-nse-backend.vercel.app/api/fetchMWPL";
 
 export const Header = ({ setMWPLData }) => {
   const [date1, setDate1] = useState("");
@@ -45,12 +45,6 @@ export const Header = ({ setMWPLData }) => {
               obj["current_oi"] = date2Data[key]["open_interest"];
               stockList.push(obj);
             }
-            // if (date1Data[key].mwpl_percentage && date2Data[key] && date2Data[key].mwpl_percentage) {
-            //   const difference = date2Data[key].mwpl_percentage - date1Data[key].mwpl_percentage;
-            //   if (difference > 3) {
-            //     console.log(date1Data[key], difference);
-            //   }
-            // }
           }
           stockList = stockList.sort((a, b) => (a.scrip_name > b.scrip_name) - (a.scrip_name < b.scrip_name));
           setMWPLData(stockList);
