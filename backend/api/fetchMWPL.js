@@ -52,7 +52,7 @@ const formatJSON = (csv) => {
  * POST Get MWPL data.
  * @return mwpl data for two dates | error.
  */
-router.post("/", async (req, res) => {
+router.get("/", async (req, res) => {
     const date1 = req.body.date1;
     const date2 = req.body.date2;
 
