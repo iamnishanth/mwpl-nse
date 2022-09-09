@@ -47,7 +47,7 @@ export const StockList = ({ mwplData }) => {
             }
           })}
       </ul>
-      {stockList.length === 0 && <p className="no-match">No stock matched your criteria</p>}
+      {stockList && stockList.length === 0 && <p className="no-match">No stock matched your criteria</p>}
     </main>
   );
 };
