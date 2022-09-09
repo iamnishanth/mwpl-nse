@@ -9,9 +9,7 @@ export const StockList = ({ mwplData }) => {
   if (mwplData) {
     if (filterStocks) {
       stockList = mwplData.filter(
-        (stock) =>
-          stock.current_mwpl_percentage - stock.prev_mwpl_percentage > minDifference ||
-          stock.current_mwpl_percentage - stock.prev_mwpl_percentage < -minDifference
+        (stock) => stock.current_mwpl_percentage - stock.prev_mwpl_percentage > minDifference
       );
     } else {
       stockList = mwplData;
@@ -34,9 +32,9 @@ export const StockList = ({ mwplData }) => {
             />{" "}
             % difference
           </p>
-          <label class="switch">
+          <label className="switch">
             <input type="checkbox" defaultChecked={filterStocks} onChange={() => setFilterStocks((prev) => !prev)} />
-            <span class="slider" />
+            <span className="slider" />
           </label>
         </div>
       )}
@@ -49,6 +47,7 @@ export const StockList = ({ mwplData }) => {
             }
           })}
       </ul>
+      {stockList.length === 0 && <p className="no-match">No stock matched your criteria</p>}
     </main>
   );
 };

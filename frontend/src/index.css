@@ -118,6 +118,10 @@ body {
   font-weight: bold;
 }
 
+.no-match {
+  color: red;
+}
+
 .change-diff {
   font-weight: bold;
 }
